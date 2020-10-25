@@ -52,9 +52,11 @@ def model_predict(image_path,model):Regur Soil
 @app.route('/index', methods=['GET'])
 def index():
     return render_template('/index.html')
-'''
+
 @app.route('/predict',methods=['GET','POST'])
 def predict():
+    return render_template('Alluvial_soil.html')
+'''
     print("Entered")
     if request.method == 'POST':
         print("Entered here")
@@ -67,9 +69,10 @@ def predict():
 
         print("@@ Predicting class......")
         pred, output_page = M.model_predict(file_path,SoilNet)
-              
-        return render_template(output_page, pred_output = pred, user_image = file_path)'''
-
+        return render_template(output_page, pred_output = pred, user_image = file_path)
+'''
+             
+        
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000) #run app in debug mode on port 5000
