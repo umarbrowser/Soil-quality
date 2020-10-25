@@ -26,25 +26,25 @@ def model_predict(image_path,model):Regur Soil
     
     
     if result == 0:
-        print("Alluvial.html")
+        print("./templates/Alluvial.html")
         
-        return "Alluvial","Alluvial.html"
+        return "Alluvial","./templates/Alluvial.html"
     elif result == 1:
-        print("regular_soil.html")
+        print("./templates/regular_soil.html")
         
-        return "Regular Soil", "Regular_soil.html"
+        return "Regular Soil", "./templates/Regular_soil.html"
     elif result == 2:
-        print("Clay_soil.html")
+        print("./templates/Clay_soil.html")
         
-        return "Clay Soil" , "Clay_soil.html"
+        return "Clay Soil" , "./templates/Clay_soil.html"
     elif result == 3:
-        print("Laterite_soil.html")
+        print("./templates/Laterite_soil.html")
         
-        return "Laterite Soil" , "Laterite_soil.html"
+        return "Laterite Soil" , "./templates/Laterite_soil.html"
 
 @app.route('/',methods=['GET'])
 def index():
-    return render_template('index.html')
+    return render_template('./templates/index.html')
 
 
 @app.route('/predict',methods=['GET','POST'])
