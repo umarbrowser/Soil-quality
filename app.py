@@ -1,4 +1,4 @@
-from tensorflow.keras.models import load_model
+"""from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 from flask import Flask, request, render_template
@@ -45,7 +45,7 @@ def model_predict(image_path,model):Regur Soil
 @app.route('/',methods=['GET'])
 def index():
     return render_template('index.html')
-"""@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['GET','POST'])
 def predict():
     print("Entered")
     if request.method == 'POST':
@@ -62,10 +62,16 @@ def predict():
               
         return render_template("index.html", pred_output = pred, user_image = file_path)
 
-    return render_template("index.html", pred_output = pred, user_image = file_path)"""
+    return render_template("index.html", pred_output = pred, user_image = file_path)
     
 
 
 if __name__ == '__main__':
-    app.run(debug=True,threaded=False)
+    app.run(debug=True,threaded=False)"""
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
     
