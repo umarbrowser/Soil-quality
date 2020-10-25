@@ -1,13 +1,13 @@
+'''
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
-from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
-
-
 import os, sys, glob, re
-
+'''
+from flask import Flask, request, render_template
 app = Flask(__name__)
+'''
 
 model_path = "SoilNet_92_89_4.h5"
 
@@ -43,13 +43,13 @@ def model_predict(image_path,model):
         
         return "Red" , "Red.html"
     
-
+'''
 
 @app.route('/',methods=['GET'])
 def index():
     return render_template('index.html')
 
-
+'''
 
 @app.route('/predict',methods=['GET','POST'])
 def predict():
@@ -68,7 +68,7 @@ def predict():
               
         return render_template(output_page, pred_output = pred, user_image = file_path)
     
-
+'''
 
 if __name__ == '__main__':
     app.run(debug=True,threaded=False)
