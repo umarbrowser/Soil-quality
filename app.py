@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-import model_predict from model_predict
+from model_predict import model_predict
 app = Flask(__name__)
 
 @app.route('/')
