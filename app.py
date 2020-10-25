@@ -26,27 +26,27 @@ def model_predict(image_path,model):Regur Soil
     
     
     if result == 0:
-        print("./templates/Alluvial.html")
+        print("Alluvial.html")
         
-        return "Alluvial","./templates/Alluvial.html"
+        return "Alluvial","Alluvial.html"
     elif result == 1:
-        print("./templates/regular_soil.html")
+        print("regular_soil.html")
         
-        return "Regular Soil", "./templates/Regular_soil.html"
+        return "Regular Soil", "Regular_soil.html"
     elif result == 2:
-        print("./templates/Clay_soil.html")
+        print("Clay_soil.html")
         
-        return "Clay Soil" , "./templates/Clay_soil.html"
+        return "Clay Soil" , "Clay_soil.html"
     elif result == 3:
-        print("./templates/Laterite_soil.html")
+        print("Laterite_soil.html")
         
-        return "Laterite Soil" , "./templates/Laterite_soil.html"
+        return "Laterite Soil" , "Laterite_soil.html"
 
 @app.route('/',methods=['GET'])
 def index():
-    return render_template('./templates/index.html')
+    return render_template('index.html')
 
-
+@app.route('/')
 @app.route('/predict',methods=['GET','POST'])
 def predict():
     print("Entered")
@@ -62,9 +62,9 @@ def predict():
         print("@@ Predicting class......")
         pred, output_page = model_predict(file_path,SoilNet)
               
-        return render_template(output_page, pred_output = pred, user_image = file_path)
+        return render_template("index.html", pred_output = pred, user_image = file_path)
 
-    return render_template(output_page, pred_output = pred, user_image = file_path)
+    return render_template("index.html", pred_output = pred, user_image = file_path)
     
 
 
