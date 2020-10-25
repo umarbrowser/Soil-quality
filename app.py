@@ -63,6 +63,8 @@ def predict():
         pred, output_page = model_predict(file_path,SoilNet)
               
         return render_template(output_page, pred_output = pred, user_image = file_path)
+
+    return render_template(output_page, pred_output = pred, user_image = file_path)
     
 
 
