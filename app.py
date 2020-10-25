@@ -1,6 +1,6 @@
 
 from flask import Flask, request, render_template #import main Flask class and request object
-import model_predict as M
+#import model_predict as M
 
 app = Flask(__name__) #create the Flask app
 
