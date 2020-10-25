@@ -1,18 +1,18 @@
 
 from flask import Flask, request, render_template #import main Flask class and request object
-"""from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 from werkzeug.utils import secure_filename
 
-import os, sys, glob, re"""
+import os, sys, glob, re
 
 app = Flask(__name__) #create the Flask app
 app.config.update(
     TESTING=True,
     SECRET_KEY=b'_5#y2L"F4Q8z\n\xec]/'
 )
-"""model_path = "model.h5"
+model_path = "model.h5"
 
 SoilNet = load_model(model_path)
 
@@ -45,8 +45,6 @@ def model_predict(image_path,model):Regur Soil
         print("Laterite_soil.html")
         
         return "Laterite Soil" , "Laterite_soil.html"
-        """
-
 
 @app.route('/')
 @app.route('/index', methods=['GET'])
