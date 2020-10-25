@@ -112,13 +112,7 @@ def model_predict(image_path,model):Regur Soil
         
         return "Laterite Soil" , "Laterite_soil.html"
     
-
 @app.route('/')
-@app.route('/index', methods=['GET'])
-def index():
-    return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
-    
+def hello_world():
+    return 'Hello, World!'
     
