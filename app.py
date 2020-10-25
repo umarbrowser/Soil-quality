@@ -1,11 +1,6 @@
-
-from flask import render_template
-
+from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/index', methods=['GET', 'POST'])
-def index():
-    return render_template('index.html')
-
-    
+def hello_world():
+    return 'Hello, World!'
