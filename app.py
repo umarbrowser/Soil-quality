@@ -111,10 +111,13 @@ def model_predict(image_path,model):Regur Soil
         print("Laterite_soil.html")
         
         return "Laterite Soil" , "Laterite_soil.html"
+    
 
-@app.route('/',methods=['GET'])
+@app.route('/')
+@app.route('/index', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
+
 """
 @app.route('/predict',methods=['GET','POST'])
 def predict():
