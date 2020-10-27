@@ -1,10 +1,10 @@
-'''
+
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 from werkzeug.utils import secure_filename
 import os, sys, glob, re
-'''
+
 from flask import Flask, request, render_template
 app = Flask(__name__)
 '''
