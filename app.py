@@ -40,7 +40,7 @@ def model_predict(image_path,model):Regur Soil
 def index():
     return render_template('./templates/index.html')
 
-
+'''
 @app.route('/predict',methods=['GET','POST'])
 def predict():
     print("Entered")
@@ -56,7 +56,7 @@ def predict():
         print("@@ Predicting class......")
         pred, output_page = model_predict(file_path,SoilNet)
               
-        return render_template(output_page, pred_output = pred, user_image = file_path)
+        return render_template(output_page, pred_output = pred, user_image = file_path)'''
 
 if __name__ == '__main__':
     app.run(debug=True,threaded=False)
