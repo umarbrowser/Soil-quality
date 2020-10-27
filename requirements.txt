@@ -1,4 +1,4 @@
-gast>=0.3.2 
+gast==0.2.2
 folium==0.2.1 
 imgaug==0.2.5 
 werkzeug==1.0.0 
